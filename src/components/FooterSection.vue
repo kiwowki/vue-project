@@ -1,0 +1,151 @@
+<script setup>
+import {footerText} from "@/constants/index"
+</script>
+
+<template>
+    <footer id="footer" role="contentinfo">
+    <div class="footer_inner">
+      <h2 class="footer_text">
+        <div>wolves</div>
+        <div>@wolves941110</div>
+      </h2>
+      <div class="footer_info">
+        <div class="left">
+          <div class="title">
+            <a href="#">sign up</a>
+          </div>
+          <p class="desc">회원가입을 하시면 댓글과 게시판 기능을 이용할 수 있습니다.</p>
+        </div>
+        <div class="right">
+          <h3>social</h3>
+          <ul>
+            <li v-for="(footer, key) in footerText" :key="key">
+              <a :href="footer.link">{{ footer.title }}</a>
+              <em>{{ footer.desc }}</em>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_right">
+        &copy; 2023 wolves941110<br />
+        이 사이트는 비트를 이용하여 제작하였습니다.
+      </div>
+    </div>
+  </footer>
+</template>
+<style lang="scss">
+.footer_inner {
+    padding: 20px;
+}
+.footer_text {
+    font-size: 8vw;
+    font-weight: 800;
+    line-height: 0.8;
+    letter-spacing: -0.4vw;
+    font-family: var(--popp);
+    color: var(--black);
+    margin-bottom: 80px;
+}
+.footer_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 1vw;
+}
+.footer_info .left {
+    width: 48%;
+    text-align: center;
+}
+.footer_info .left .title {
+    font-size: 3vw;
+    font-weight: 800;
+    color: var(--white);
+    text-transform: uppercase;
+    border: 10px solid var(--white);
+    margin-bottom: 20px;
+}
+.footer_info .desc {
+    font-size: 1vw;
+    color: var(--white);
+}
+.footer_info .right {
+  width: 48%;
+    text-align: center;
+}
+.footer_info .right h3 {
+    font-size: 3vw;
+    font-weight: 800;
+    color: var(--white);
+    text-transform: uppercase;
+    border: 10px solid var(--white);
+    margin-bottom: 20px;
+}
+.footer_info .right ul {
+  width: 100%;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+.footer_info .right ul li {
+    // margin-bottom: 10px;
+    padding: 5px 20px;
+    transition: all 0.3s;
+}
+.footer_info .right ul li:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+.footer_info .right ul li a {
+    font-size: 1.3vw;
+    color: var(--white);
+    border-radius: 20px;
+    text-transform: uppercase;
+    padding: 0 8px;
+    
+}
+.footer_info .right ul li a:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.footer_info .right ul li em {
+    font-size: 1vw;
+    padding-left: 30px;
+}
+
+
+.footer_right {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: var(--black500);
+}
+
+@media (max-width: 1000px){
+  .footer_info .left {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .footer_info .left .desc {
+    font-size: 1.9vw;
+  }
+  .footer_info .right {
+    width: 100%;
+  }
+  .footer_info .right ul {
+    width: 80%;
+  }
+  .footer_info .right li {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer_info .right ul li a {
+    font-size: 2.2vw;
+  }
+  .footer_info .right ul li em {
+    font-size: 1.7vw;
+    padding-left: 0;
+  }
+}
+</style>

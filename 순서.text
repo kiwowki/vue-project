@@ -1,0 +1,60 @@
+1. 리드미에 따라 셋팅하기
+
+
+2. 파비콘 public폴더에 넣기
+
+
+3. index.html에 <link rel="icon" type="image/svg+xml" href="favicon.svg"> 링크 걸기,
+바디에
+<div id="app"></div>
+<script type="module" src="/src/main.js"></script>
+넣기
+
+
+4. 각 파일 안에 쓸 데 없는 기본 파일들 지워주기
+public - 아까 만든 파비콘
+router - index.js
+views - HomeView.vue
+src - App.vue, main.js
+만 남기기
+
+
+5. components에 각 섹션 만들고 안에 기본 템플릿 넣기
+
+
+6. HomeView.vue에 import하기
+<script setup>
+import ContactSection from '../components/ContactSection.vue';
+</script>
+<template>
+  <SkipSection />
+  <HeaderSection />
+  <main id="main" role="main">
+    <IntroSection />(해당 파일 위에 켜놨으면 자동 import 연동 되어야 함)
+    ...
+  </main>
+  <FooterSection />
+</template>
+이런 식으로
+
+
+7. App.vue에 RouterView 연동하기
+<script setup>
+import { RouterView } from "vue-router";
+</script>
+<template>
+  <RouterView />
+</template>
+이런 식으로
+
+
+8. 기본 scss세팅(reset 등)하고 main.js에 import "./assets/scss/style.scss"; 넣기
+
+
+9. 각 컴포넌트 밑에 style 작성하기
+<style lang="scss">
+  .intro_inner {
+
+  }
+</style>
+이런식으로
