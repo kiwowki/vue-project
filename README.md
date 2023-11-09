@@ -32,9 +32,9 @@ Vue.js는 현대적인 웹 애플리케이션을 개발하기 위한 JavaScript 
 √ Add ESLint for code quality? ... No / <span style="color: blue">Yes</span>  
 √ Add Prettier for code formatting? ... No / <span style="color: blue">Yes</span>
 
-gsap 설치 : `npm install gsap`
-sass 설치 : `npm install sass`
-lenis 설치 : `npm install @studio-freight/lenis`
+gsap 설치 : `npm install gsap`  
+sass 설치 : `npm install sass`  
+lenis 설치 : `npm install @studio-freight/lenis`   
 
 ## 트러블 슈팅
 
