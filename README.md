@@ -11,9 +11,9 @@ Vue.js는 현대적인 웹 애플리케이션을 개발하기 위한 JavaScript 
 디렉티브: Vue.js는 템플릿 내에서 특별한 속성인 디렉티브를 사용하여 간단한 로직을 추가할 수 있습니다. 예를 들어, v-if 디렉티브는 조건에 따라 요소를 렌더링하거나 숨길 수 있도록 해줍니다.
 예시 -
 
-<li v-for="(nav, key) in headerNav" :key="key">
- <a href="nav.url">{{ nav.title }}</a>
-</li>
+`<li v-for="(nav, key) in headerNav" :key="key">`
+`<a href="nav.url">{{ nav.title }}</a>`
+`</li>`
 
 상태 관리 (Vuex): 복잡한 애플리케이션에서 상태 관리는 중요합니다. Vue.js는 Vuex라 불리는 상태 관리 라이브러리를 제공하여 애플리케이션의 상태를 중앙에서 효과적으로 관리할 수 있게 해줍니다.
 
